@@ -97,6 +97,6 @@ h1 {
   }
   .search-input {
     width: calc(100% - 20px); /* Adjust width to fit container */
-    max-width: 50%; /* Remove max-width for responsiveness */
+    max-width: 100%; /* Remove max-width for responsiveness */
   }
 }
