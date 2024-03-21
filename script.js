@@ -25,5 +25,8 @@ searchInput.addEventListener('input', function() {
     } else {
       category.style.display = 'none';
     }
+    function goBack() {
+            window.location.href = "index.html";
+    }
   });
 });
