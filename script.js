@@ -27,6 +27,6 @@ searchInput.addEventListener('input', function() {
     }
   });
     function goBack() {
-     window.location.href = "index.html";
+     window.location.href = "#";
     }
 });
