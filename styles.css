@@ -10,8 +10,9 @@ h1 {
   text-align: center;
   margin: 20px 0;
   font-size: 2em;
-  border: 1px;
-  border-color: #000000;
+  border: 2px solid #000000; /* Add border around the text */
+  padding: 10px; /* Add padding around the text */
+  display: inline-block;
   background-image: linear-gradient(to right, #4b0082, #8a2be2, #ff1493, #ff4500);
   -webkit-background-clip: text;
   color: transparent;
