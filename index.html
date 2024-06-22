@@ -7,19 +7,30 @@
   <link rel="icon" type="image/png" href="ainexs.png">
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
+<div class="progress-container">
+  <div class="progress-bar" id="myProgressBar"></div>
+</div>  
 <body>
   <h1>AI Nexs</h1>
   
-  <!-- Search Bar -->
   <div class="search-bar">
     <input type="text" class="search-input" placeholder="Search AI tools..." id="searchInput">
   </div>
 
-  <!-- Categories -->
+  <div class="categories">
+    <div class="category-filter">
+      <button class="filter-button active" data-category="all">All</button>
+      <button class="filter-button" data-category="textGeneration">Text Generation</button>
+      <button class="filter-button" data-category="imageGeneration">Image Generation</button>
+      <button class="filter-button" data-category="audioGeneration">Audio Generation</button>
+      <button class="filter-button" data-category="videoGeneration">Video Generation</button>
+      <button class="filter-button" data-category="AI Powered Search">AI-powered search</button>
+      </div>  
+
   <div class="category" id="textGeneration">
     <h2 style="color: #28a745;">Text Generation</h2>
     <ul>
-      <li><a href="https://botchatter.vercel.app/" target="_blank"><img src="Chatter.png" alt="Chatter Icon">Chatter</a></li>
+      <li><a href="https://adisorg.wixsite.com/chatbot" target="_blank"><img src="Chatter.png" alt="Chatter Icon">Chatter</a></li>
       <li><a href="https://chat.openai.com/" target="_blank"><img src="https://static.vecteezy.com/system/resources/previews/021/059/825/original/chatgpt-logo-chat-gpt-icon-on-green-background-free-vector.jpg" alt="ChatGPT Icon">ChatGPT</a></li>
       <li><a href="https://gemini.google.com/" target="_blank"><img src="https://appszx.com/wp-content/uploads/2024/02/Google-Gemini-App-150x150.jpg" alt="Gemini Icon">Gemini</a></li>
       <li><a href="https://bing.com/copilot" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Microsoft_365_Copilot_Icon.svg/1024px-Microsoft_365_Copilot_Icon.svg.png" alt="Bing CoPilot Icon">Bing CoPilot</a></li>
@@ -59,11 +70,10 @@
     </ul>
   </div>
 
-  <!-- Video Generation Category -->
   <div class="category" id="videoGeneration">
     <h2 style="color: #6610f2;">Video Generation</h2>
     <ul>
-      <li><a href="https://openai.com/sora" target="_blank"><img src="https://www.soradownload.com/img/sora-download.webp" alt="Open AI Sora Icon">Sora <span style="display: inline-block; color: black; margin-left: 10px; font-weight: bolder;">Coming soon!</span></a></li>
+      <li><a href="https://openai.com/sora" target="_blank"><img src="https://www.soradownload.com/img/sora-download.webp" alt="Open AI Sora Icon">Sora <span style="display: inline-block; color: black; margin-left: 10px; font-size: larger; font-weight: bolder;">Coming soon!</span></a></li>
       <li><a href="https://www.d-id.com/" target="_blank"><img src="https://www.d-id.com/wp-content/uploads/2022/12/D-ID-LOGO.png" alt="D-ID Icon">D-ID</a></li>
       <li><a href="https://www.kapwing.com/ai" target="_blank"><img src="https://assets.paxi.ai/sg/logos/8acdbf5bda164c72b10d73f323da2911.png" alt="kapwing Icon">Kapwing</a></li>
       <li><a href="https://runwayml.com/" target="_blank"><img src="https://th.bing.com/th/id/OIP.v7oivpHiHCtyy4t7SQuwIwAAAA?rs=1&pid=ImgDetMain" alt="runway Icon">Runway</a></li>
@@ -79,9 +89,11 @@
   <div class="category" id="AI Powered Search">
     <h2 style="color: #212121;">AI Powered Search</h2>
     <ul>
-      <li><a href="https://botchatter.vercel.app/" target="_blank"><img src="Chatter.png" alt="Chatter Icon">Chatter</a></li>
+      <li><a href="https://adisorg.wixsite.com/chatbot" target="_blank"><img src="https://ainexs.netlify.app/Chatter.png" alt="Chatter Icon">Chatter</a></li>
     </ul>
   </div>
+
+  <button id="scrollToTopBtn" title="Go to top">Go to top</button>
 
   <script src="script.js"></script>
 </body>
