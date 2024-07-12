@@ -169,9 +169,9 @@ body {
     width: 100%; /* Show the progress bar when it's loaded */
   }
 
-  #myProgressBar.loaded {
-    display: none;
-  }
+  body.loaded #myProgressBar {
+  display: none;
+}
 
 .category-filter {
     display: flex;
