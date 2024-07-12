@@ -169,6 +169,10 @@ body {
     width: 100%; /* Show the progress bar when it's loaded */
   }
 
+  #myProgressBar.loaded {
+    display: none;
+  }
+
 .category-filter {
     display: flex;
     flex-wrap: wrap; /* Allow buttons to wrap to the next line if needed */
