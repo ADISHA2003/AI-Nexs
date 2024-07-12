@@ -51,8 +51,6 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// ... Your existing JavaScript ...
-
 // Get the progress bar element
 const progressBar = document.getElementById("myProgressBar");
 const body = document.body;
@@ -69,8 +67,6 @@ const interval = setInterval(() => {
     body.classList.add("loaded"); // Add the "loaded" class to the body
   }
 }, 100); // Update every 100 milliseconds
-
-// ... Your existing JavaScript ...
 
 const filterButtons = document.querySelectorAll(".filter-button");
 
