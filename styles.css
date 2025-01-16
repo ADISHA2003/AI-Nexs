@@ -1,229 +1,228 @@
 body {
-    font-family: arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4e6ff;
-    color: #333;
-    opacity: 0; /* Initially hide the body */
-    transition: opacity 1s ease-in-out;
-  }
-  
-  body.loaded {
-    opacity: 1; /* Show the body when it's loaded */
-  }
-  
-  h1 {
-    text-align: center;
-    margin: 20px 0;
-    font-size: 2em;
-    background-image: linear-gradient(to right, #4b0082, #8a2be2, #ff1493, #ff4500);
-    -webkit-background-clip: text;
-    color: transparent;
-  }
-  
-  .back-button {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-  }
-  
-  .search-bar {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .search-input {
-    padding: 10px 15px;
-    width: 100%;
-    max-width: 400px;
-    border-radius: 50px;
-    border: 0px solid #007bff;
-    background-color: #fff;
-  }
-  
-  .search-input::placeholder{
-    color: #999;
-  }
+  font-family: arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4e6ff;
+  color: #333;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
 
-  .search-input:focus {
-    outline: none;
-    border: 0px solid #007bff;
-  }
+body.loaded {
+  opacity: 1;
+}
 
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 2em;
+  background-image: linear-gradient(to right, #4b0082, #8a2be2, #ff1493, #ff4500);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.back-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.search-bar {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  padding: 10px 15px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 50px;
+  border: 0px solid #007bff;
+  background-color: #fff;
+}
+
+.search-input::placeholder {
+  color: #999;
+}
+
+.search-input:focus {
+  outline: none;
+  border: 0px solid #007bff;
+}
+
+.category {
+  margin-bottom: 40px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category:hover {
+  background-color: #fff;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.15);
+}
+
+.category h2 {
+  margin-bottom: 30px;
+  color: #007bff;
+  transition: color 0.3s ease;
+  margin-left: 0px;
+  display: block;
+  text-align: center;
+  border: 5px solid #f4f4f4;
+  border-radius: 10px;
+  padding: 5px 5px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+.category ul {
+  list-style: none;
+  padding: 0;
+}
+
+.category li {
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.category li:hover {
+  transform: translateX(5px);
+}
+
+.category a {
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.category a:hover {
+  color: #0056b3;
+}
+
+.category img {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.category a:hover img {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
   .category {
-    margin-bottom: 40px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    padding: 15px;
   }
-  
-  .category:hover {
-    background-color: #fff;
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.15);
+  .search-input {
+    width: calc(100% - 100px);
+    max-width: 100%;
   }
-  
-  .category h2 {
-    margin-bottom: 30px;
-    color: #007bff;
-    transition: color 0.3s ease;
-    margin-left: 0px;
-    display: block; /* This line makes the h2 element a block-level element */
-    text-align: center; /* Center the text within the block */
-    border: 5px solid #f4f4f4;
-    border-radius: 10px;
-    padding: 5px 5px;
-    background-color: #fff;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
-  }
-  
-  .category ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .category li {
-    margin-bottom: 10px;
-    transition: transform 0.3s ease;
-  }
-  
-  .category li:hover {
-    transform: translateX(5px);
-  }
-  
-  .category a {
-    text-decoration: none;
-    color: #007bff;
-    transition: color 0.3s ease;
-    display: flex;
-    align-items: center;
-  }
-  
-  .category a:hover {
-    color: #0056b3;
-  }
-  
-  .category img {
-    width: 40px;
-    height: 40px;
-    border-radius: 5px;
-    margin-right: 10px;
-    transition: transform 0.3s ease;
-  }
-  
-  .category a:hover img {
-    transform: scale(1.1);
-  }
-  
-  @media (max-width: 768px) {
-    .category {
-      padding: 15px;
-    }
-    .search-input {
-      width: calc(100% - 100px); /* Adjust width to fit container */
-      max-width: 100%; /* Remove max-width for responsiveness */
-    }
-  }
+}
 
 #scrollToTopBtn {
-    position: fixed; /* Position it fixedly */
-    bottom: 20px; /* Position it at the bottom */
-    right: 20px; /* Position it on the right */
-    display: none; /* Hide it initially */
-    background-color: #007bff; /* Blue background */
-    color: white; /* White text */
-    padding: 10px 15px; /* Add padding */
-    border: none; /* Remove default border */
-    border-radius: 10px; /* Round the corners */
-    cursor: pointer; /* Change cursor to pointer */
-    z-index: 100; /* Ensure it's on top of other elements */
-  }
-  
-  #scrollToTopBtn:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-  }
-  
-  #scrollToTopBtn.show {
-    display: block; /* Make it visible */
-  }
-  
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #0056b3;
+}
+
+#scrollToTopBtn.show {
+  display: block;
+}
+
 .progress-container {
-    width: 100%;
-    height: 5px; /* Adjust the height as needed */
-    background-color: #e0e0e0; /* Background color for the container */
-    border-radius: 0px; /* Round the corners */
-    margin-bottom: 20px; /* Add some spacing */
-  }
-  
-  .progress-bar {
-    height: 100%;
-    background-color: #007bff; /* Progress bar color */
-    border-radius: 0px;
-    width: 0%; /* Initially, the progress bar is 0% wide */
-    transition: width 2s ease-in-out; /* Smooth transition for width changes */
-  }
-  
-  .progress-bar.loaded {
-    width: 100%; /* Show the progress bar when it's loaded */
-  }
+  width: 100%;
+  height: 5px;
+  background-color: #e0e0e0;
+  border-radius: 0px;
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #007bff;
+  border-radius: 0px;
+  width: 0%;
+  transition: width 2s ease-in-out;
+}
+
+.progress-bar.loaded {
+  width: 100%;
+}
 
 .category-filter {
-    display: flex;
-    flex-wrap: wrap; /* Allow buttons to wrap to the next line if needed */
-    justify-content: center; /* Center the buttons horizontally */
-    margin-bottom: 5px; /* Add some spacing below the filter */
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-  
-  .filter-button {
-    background-color: #fff; /* Light gray background */
-    color: #000; /* Dark gray text */
-    padding: 5px 10px; /* Add padding */
-    border: 1px solid #007bff; /* Light gray border */
-    border-radius: 5px; /* Rounded corners */
-    margin: 5px; /* Add spacing between buttons */
-    cursor: pointer; /* Change cursor to pointer on hover */
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
-  }
-  
-  .filter-button.active {
-    background-color: #007bff; /* Blue background for active button */
-    color: white; /* White text for active button */
-  }
-  
-  /* Responsive adjustments for smaller screens */
-  @media (max-width: 768px) {
-    .category-filter {
-      flex-direction: row; /* Stack buttons vertically on smaller screens */
-      align-items: center; /* Center buttons vertically */
-    }
-  }
-  
-  .coming-soon-tag {
-    display: inline-block; /* Make it an inline block for better control */
-    background-color: #f0f0f0; /* Light gray background */
-    color: #333; /* Dark gray text */
-    padding: 5px 10px; /* Add padding */
-    border-radius: 5px; /* Round the corners */
-    margin-left: 10px; /* Add spacing to the left */
-    font-size: 1em; /* Adjust font size as needed */
-    font-weight: bold; /* Make the text bold */
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 5px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
 
-  .coming-soon-tag i{
-    margin-right: 5px;
-  }
+.filter-button {
+  background-color: #fff;
+  color: #000;
+  padding: 5px 10px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
-  .category li a:nth-child(2) { /* Select the second child (Sora text) within the link */
-    display: inline-block; /* Make it an inline block for better control */
-    background-color: #f0f0f0; /* Light gray background */
-    color: #333; /* Dark gray text */
-    padding: 5px 10px; /* Add padding */
-    border-radius: 5px; /* Round the corners */
-    margin-left: 10px; /* Add spacing to the left */
-    font-size: 1em; /* Adjust font size as needed */
-    font-weight: bold; /* Make the text bold */
+.filter-button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .category-filter {
+    flex-direction: row;
+    align-items: center;
   }
+}
+
+.coming-soon-tag {
+  display: inline-block;
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-left: 10px;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.coming-soon-tag i {
+  margin-right: 5px;
+}
+
+.category li a:nth-child(2) {
+  display: inline-block;
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-left: 10px;
+  font-size: 1em;
+  font-weight: bold;
+}
